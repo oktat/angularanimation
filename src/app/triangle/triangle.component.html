@@ -1,0 +1,27 @@
+
+<div class="triangleForm">
+    <div class="mt-3">
+        <label for="base" 
+        class="form-label">Alap</label>
+        <input type="text" [formControl]="base"
+        id="base" class="form-control">
+    </div>
+    <div class="mt-3">
+        <label for="height" 
+        class="form-label">Magasság</label>
+        <input type="text" [formControl]="height"
+        id="height" class="form-control">
+    </div>
+    
+    <div class="mt-3">
+        <button class="btn btn-primary me-2" (click)="onCalcButtonClick()">Számít</button>
+        <button class="btn btn-primary" (click)="onDeleteButtonClick()">Töröl</button>
+    </div>
+
+    <div class="mt-3 p-1" [@result]="isVisible ? 'enable' : 'disable'">
+        <label for="area" 
+        class="form-label">Terület</label>
+        <input type="text" [formControl]="area"
+        id="area" class="form-control">
+    </div>
+</div>
